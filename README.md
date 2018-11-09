@@ -4,6 +4,9 @@ Serve static files for [mixer](https://github.com/imatomix/mixer)
 デザイナーが node.js とサーバサイド周りの勉強にちまちま作ってます。
 仕様は気紛れに変わります。
 
+## Overview
+静的ファイルへのリクエストを処理する。
+
 ## Usage
 
 ```./public``` 以下のファイルに ```http://localhost:3000/public/``` からアクセスする
@@ -17,7 +20,7 @@ const app = new mixer()
 app.mix(serve('./public')).listen(3000)
 ```
 
-[mix-router](https://github.com/imatomix/mix-router)などのルーティングと組み合わせる。
+[mix-router](https://github.com/imatomix/mix-router)などのルーティングと組み合わせる。
 ```./public/images``` 以下のファイルに ```http://localhost:3000/imgs/``` からアクセスする
 
 ```js
