@@ -1,4 +1,4 @@
-# mix-serve
+# mix-static
 Serve static files for [mixer](https://github.com/imatomix/mixer)
 
 デザイナーが node.js とサーバサイド周りの勉強にちまちま作ってます。
@@ -13,11 +13,11 @@ Serve static files for [mixer](https://github.com/imatomix/mixer)
 
 ```js
 const mixer = require('mixer')
-const serve = require('mix-serve')
+const static = require('mix-static')
 
 const app = new mixer()
 
-app.mix(serve('./public')).listen(3000)
+app.mix(static('./public')).listen(3000)
 ```
 
 [mix-router](https://github.com/imatomix/mix-router)などのルーティングと組み合わせる。
@@ -26,11 +26,11 @@ app.mix(serve('./public')).listen(3000)
 ```js
 const mixer = require('mixer')
 const { get } = require('mix-router')
-const serve = require('mix-serve')
+const static = require('mix-static')
 
 const app = new mixer()
 
-app.mix(get('/img/*', serve('./public/images')).listen(3000)
+app.mix(get('/img/*', static('./public/images')).listen(3000)
 ```
 ルート指定の ```/*``` が大事。
 
