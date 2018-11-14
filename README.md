@@ -9,7 +9,7 @@ Serve static files for [mixer](https://github.com/imatomix/mixer)
 
 ## Usage
 
-```./public``` 以下のファイルに ```http://localhost:3000/public/``` からアクセスする
+```./public``` 以下のファイルに ```http://localhost:3000/``` からアクセスする
 
 ```js
 const mixer = require('mixer')
