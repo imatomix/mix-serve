@@ -17,22 +17,26 @@ const static = require('mix-static')
 
 const app = new mixer()
 
-app.mix(static('./public')).listen(3000)
+app.mix(static({public:'./public'}).listen(3000)
 ```
 
-[mix-router](https://github.com/imatomix/mix-router)などのルーティングと組み合わせる。
 ```./public/images``` 以下のファイルに ```http://localhost:3000/imgs/``` からアクセスする
 
 ```js
 const mixer = require('mixer')
-const { get } = require('mix-router')
 const static = require('mix-static')
 
 const app = new mixer()
 
-app.mix(get('/img/*', static('./public/images')).listen(3000)
+app.mix(
+  static(
+    {
+      route: '/imgs',
+      public:'./public/images'
+    }
+  )
+ ).listen(3000)
 ```
-ルート指定の ```/*``` が大事。
 
 ## ToDo
 勉強中
@@ -45,5 +49,6 @@ app.mix(get('/img/*', static('./public/images')).listen(3000)
 - [mixer](https://github.com/imatomix/mixer) : サーバー処理
 - [mix-router](https://github.com/imatomix/mix-router) : ルーティング機能
 - [mix-favicon](https://github.com/imatomix/mix-favicon) : faviconのサーブ
-- mix-cors : cors処理（作ろうかな）
+- [mix-logger](https://github.com/imatomix/mix-logger) : logger
+- [mix-cors](https://github.com/imatomix/mix-cors) : cors処理
 - mix-csrf : csrf処理（作ろうかな）
