@@ -50,5 +50,5 @@ app.mix(
 - [mix-router](https://github.com/imatomix/mix-router) : ルーティング機能
 - [mix-favicon](https://github.com/imatomix/mix-favicon) : faviconのサーブ
 - [mix-logger](https://github.com/imatomix/mix-logger) : logger
-- [mix-cors](https://github.com/imatomix/mix-cors) : cors処理
+- [mix-cors](https://github.com/imatomix/mix-cors) : cors処理
 - mix-csrf : csrf処理（作ろうかな）
